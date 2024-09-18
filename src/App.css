@@ -1,38 +1,106 @@
 .App {
-  text-align: center;
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #f0f0f0;
+  padding: 10px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav ul li {
+  margin: 0 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.book-list, .add-book, .edit-book {
+  margin-top: 20px;
+}
+
+.book-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 10px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.book-form input, .book-form select, .book-form button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.book-form button {
+  cursor: pointer;
+  background-color: #4CAF50;
   color: white;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+.book-form button:hover {
+  background-color: #45a049;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.book-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.book-item h3 {
+  margin: 0 0 10px 0;
+}
+
+.edit-button, .delete-button {
+  padding: 5px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #008CBA;
+  color: white;
+  text-decoration: none;
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+}
+
+.filter-books {
+  margin-bottom: 20px;
+}
+
+.filter-books select {
+  margin-right: 10px;
+  padding: 5px;
+}
+
+button.danger {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+button.danger:hover {
+  background-color: #d32f2f;
 }
